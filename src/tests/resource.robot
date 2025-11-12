@@ -23,4 +23,8 @@ Open And Configure Browser
     ELSE
         Set Selenium Speed  ${DELAY}
     END
-    Open Browser  browser=${BROWSER}  options=${options}
+    Open Browser    ${HOME_URL}    ${BROWSER}    options=${options}
+
+Reset Counter
+    Click Button    Nollaa
+    Page Should Contain    nappia painettu 0 kertaa
